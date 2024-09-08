@@ -8,3 +8,11 @@
        name:
         - nginx
        state: latest
+   - name: Copy file with owner and permissions
+     copy:
+       src:  "index.html"
+       dest: "/var/www/html/index.html"
+       owner: ubuntu
+       group: ubuntu
+       mode: '0644'
+
